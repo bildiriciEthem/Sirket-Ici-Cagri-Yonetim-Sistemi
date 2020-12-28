@@ -1,0 +1,1302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F5352B9-F607-449C-9BF0-BDA8F0B91593}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>cagri</RootNamespace>
+    <AssemblyName>cagri</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.CodeParser.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dialogs.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDialogs.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminkontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminkontrol.Designer.cs">
+      <DependentUpon>adminkontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="anaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="anaForm.Designer.cs">
+      <DependentUpon>anaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bilgiİşlemKontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="bilgiİşlemKontrol.Designer.cs">
+      <DependentUpon>bilgiİşlemKontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet11.cs">
+      <DependentUpon>cagriDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet13.cs">
+      <DependentUpon>cagriDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet28.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet28.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet29.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet29.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet30.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet30.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet32.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet32.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet33.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet33.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet34.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet34.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet35.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet35.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet36.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet36.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet37.cs">
+      <DependentUpon>cagriDataSet37.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet37.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet37.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet38.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet38.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet39.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet39.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet40.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet40.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet41.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet42.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet42.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet43.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet43.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet44.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet44.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet45.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet45.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet46.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet46.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet47.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet47.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet48.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet48.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet49.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet49.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet50.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet50.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet51.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet51.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet52.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet52.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet53.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet53.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet54.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet54.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet55.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet55.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet56.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet56.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet57.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet57.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet58.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet58.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet59.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet59.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet60.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet60.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet61.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet61.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet62.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet62.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet63.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet63.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet64.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet64.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet65.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet65.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cagriDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cagriDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form1userkontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="form1userkontrol.Designer.cs">
+      <DependentUpon>form1userkontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="giris.Designer.cs">
+      <DependentUpon>giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ik.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ik.Designer.cs">
+      <DependentUpon>ik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kapak.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="kapak.Designer.cs">
+      <DependentUpon>kapak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kaydol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kaydol.Designer.cs">
+      <DependentUpon>kaydol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kaydol2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kaydol2.Designer.cs">
+      <DependentUpon>kaydol2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kaydolkontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="kaydolkontrol.Designer.cs">
+      <DependentUpon>kaydolkontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kullanicikontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="kullanicikontrol.Designer.cs">
+      <DependentUpon>kullanicikontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kullanici_secme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kullanici_secme.Designer.cs">
+      <DependentUpon>kullanici_secme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="satinAlma.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="satinAlma.Designer.cs">
+      <DependentUpon>satinAlma.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminkontrol.resx">
+      <DependentUpon>adminkontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="anaForm.mzn-IR.resx">
+      <DependentUpon>anaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="anaForm.resx">
+      <DependentUpon>anaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bilgiİşlemKontrol.resx">
+      <DependentUpon>bilgiİşlemKontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form1userkontrol.resx">
+      <DependentUpon>form1userkontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="giris.resx">
+      <DependentUpon>giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ik.resx">
+      <DependentUpon>ik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kapak.resx">
+      <DependentUpon>kapak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kaydol.resx">
+      <DependentUpon>kaydol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kaydol2.resx">
+      <DependentUpon>kaydol2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kaydolkontrol.resx">
+      <DependentUpon>kaydolkontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullanicikontrol.resx">
+      <DependentUpon>kullanicikontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullanici_secme.resx">
+      <DependentUpon>kullanici_secme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="satinAlma.resx">
+      <DependentUpon>satinAlma.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="cagriDataSet.xsc">
+      <DependentUpon>cagriDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet.xss">
+      <DependentUpon>cagriDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet1.xsc">
+      <DependentUpon>cagriDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet1.xss">
+      <DependentUpon>cagriDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet10.xsc">
+      <DependentUpon>cagriDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet10.xss">
+      <DependentUpon>cagriDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet11.xsc">
+      <DependentUpon>cagriDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet11.xss">
+      <DependentUpon>cagriDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet12.xsc">
+      <DependentUpon>cagriDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet12.xss">
+      <DependentUpon>cagriDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet13.xsc">
+      <DependentUpon>cagriDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet13.xss">
+      <DependentUpon>cagriDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet14.xsc">
+      <DependentUpon>cagriDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet14.xss">
+      <DependentUpon>cagriDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet15.xsc">
+      <DependentUpon>cagriDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet15.xss">
+      <DependentUpon>cagriDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet16.xsc">
+      <DependentUpon>cagriDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet16.xss">
+      <DependentUpon>cagriDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet17.xsc">
+      <DependentUpon>cagriDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet17.xss">
+      <DependentUpon>cagriDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet18.xsc">
+      <DependentUpon>cagriDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet18.xss">
+      <DependentUpon>cagriDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet19.xsc">
+      <DependentUpon>cagriDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet19.xss">
+      <DependentUpon>cagriDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet2.xsc">
+      <DependentUpon>cagriDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet2.xss">
+      <DependentUpon>cagriDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet20.xsc">
+      <DependentUpon>cagriDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet20.xss">
+      <DependentUpon>cagriDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet21.xsc">
+      <DependentUpon>cagriDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet21.xss">
+      <DependentUpon>cagriDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet22.xsc">
+      <DependentUpon>cagriDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet22.xss">
+      <DependentUpon>cagriDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet23.xsc">
+      <DependentUpon>cagriDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet23.xss">
+      <DependentUpon>cagriDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet24.xsc">
+      <DependentUpon>cagriDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet24.xss">
+      <DependentUpon>cagriDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet25.xsc">
+      <DependentUpon>cagriDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet25.xss">
+      <DependentUpon>cagriDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet26.xsc">
+      <DependentUpon>cagriDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet26.xss">
+      <DependentUpon>cagriDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet27.xsc">
+      <DependentUpon>cagriDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet27.xss">
+      <DependentUpon>cagriDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet28.xsc">
+      <DependentUpon>cagriDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet28.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet28.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet28.xss">
+      <DependentUpon>cagriDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet29.xsc">
+      <DependentUpon>cagriDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet29.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet29.xss">
+      <DependentUpon>cagriDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet3.xsc">
+      <DependentUpon>cagriDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet3.xss">
+      <DependentUpon>cagriDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet30.xsc">
+      <DependentUpon>cagriDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet30.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet30.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet30.xss">
+      <DependentUpon>cagriDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet31.xsc">
+      <DependentUpon>cagriDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet31.xss">
+      <DependentUpon>cagriDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet32.xsc">
+      <DependentUpon>cagriDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet32.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet32.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet32.xss">
+      <DependentUpon>cagriDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet33.xsc">
+      <DependentUpon>cagriDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet33.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet33.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet33.xss">
+      <DependentUpon>cagriDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet34.xsc">
+      <DependentUpon>cagriDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet34.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet34.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet34.xss">
+      <DependentUpon>cagriDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet35.xsc">
+      <DependentUpon>cagriDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet35.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet35.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet35.xss">
+      <DependentUpon>cagriDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet36.xsc">
+      <DependentUpon>cagriDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet36.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet36.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet36.xss">
+      <DependentUpon>cagriDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet37.xsc">
+      <DependentUpon>cagriDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet37.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet37.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet37.xss">
+      <DependentUpon>cagriDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet38.xsc">
+      <DependentUpon>cagriDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet38.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet38.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet38.xss">
+      <DependentUpon>cagriDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet39.xsc">
+      <DependentUpon>cagriDataSet39.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet39.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet39.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet39.xss">
+      <DependentUpon>cagriDataSet39.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet4.xsc">
+      <DependentUpon>cagriDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet4.xss">
+      <DependentUpon>cagriDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet40.xsc">
+      <DependentUpon>cagriDataSet40.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet40.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet40.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet40.xss">
+      <DependentUpon>cagriDataSet40.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet41.xsc">
+      <DependentUpon>cagriDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet41.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet41.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet41.xss">
+      <DependentUpon>cagriDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet42.xsc">
+      <DependentUpon>cagriDataSet42.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet42.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet42.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet42.xss">
+      <DependentUpon>cagriDataSet42.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet43.xsc">
+      <DependentUpon>cagriDataSet43.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet43.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet43.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet43.xss">
+      <DependentUpon>cagriDataSet43.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet44.xsc">
+      <DependentUpon>cagriDataSet44.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet44.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet44.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet44.xss">
+      <DependentUpon>cagriDataSet44.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet45.xsc">
+      <DependentUpon>cagriDataSet45.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet45.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet45.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet45.xss">
+      <DependentUpon>cagriDataSet45.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet46.xsc">
+      <DependentUpon>cagriDataSet46.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet46.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet46.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet46.xss">
+      <DependentUpon>cagriDataSet46.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet47.xsc">
+      <DependentUpon>cagriDataSet47.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet47.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet47.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet47.xss">
+      <DependentUpon>cagriDataSet47.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet48.xsc">
+      <DependentUpon>cagriDataSet48.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet48.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet48.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet48.xss">
+      <DependentUpon>cagriDataSet48.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet49.xsc">
+      <DependentUpon>cagriDataSet49.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet49.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet49.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet49.xss">
+      <DependentUpon>cagriDataSet49.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet5.xsc">
+      <DependentUpon>cagriDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet5.xss">
+      <DependentUpon>cagriDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet50.xsc">
+      <DependentUpon>cagriDataSet50.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet50.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet50.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet50.xss">
+      <DependentUpon>cagriDataSet50.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet51.xsc">
+      <DependentUpon>cagriDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet51.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet51.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet51.xss">
+      <DependentUpon>cagriDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet52.xsc">
+      <DependentUpon>cagriDataSet52.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet52.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet52.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet52.xss">
+      <DependentUpon>cagriDataSet52.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet53.xsc">
+      <DependentUpon>cagriDataSet53.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet53.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet53.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet53.xss">
+      <DependentUpon>cagriDataSet53.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet54.xsc">
+      <DependentUpon>cagriDataSet54.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet54.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet54.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet54.xss">
+      <DependentUpon>cagriDataSet54.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet55.xsc">
+      <DependentUpon>cagriDataSet55.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet55.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet55.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet55.xss">
+      <DependentUpon>cagriDataSet55.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet56.xsc">
+      <DependentUpon>cagriDataSet56.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet56.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet56.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet56.xss">
+      <DependentUpon>cagriDataSet56.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet57.xsc">
+      <DependentUpon>cagriDataSet57.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet57.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet57.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet57.xss">
+      <DependentUpon>cagriDataSet57.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet58.xsc">
+      <DependentUpon>cagriDataSet58.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet58.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet58.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet58.xss">
+      <DependentUpon>cagriDataSet58.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet59.xsc">
+      <DependentUpon>cagriDataSet59.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet59.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet59.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet59.xss">
+      <DependentUpon>cagriDataSet59.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet6.xsc">
+      <DependentUpon>cagriDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet6.xss">
+      <DependentUpon>cagriDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet60.xsc">
+      <DependentUpon>cagriDataSet60.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet60.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet60.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet60.xss">
+      <DependentUpon>cagriDataSet60.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet61.xsc">
+      <DependentUpon>cagriDataSet61.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet61.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet61.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet61.xss">
+      <DependentUpon>cagriDataSet61.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet62.xsc">
+      <DependentUpon>cagriDataSet62.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet62.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet62.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet62.xss">
+      <DependentUpon>cagriDataSet62.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet63.xsc">
+      <DependentUpon>cagriDataSet63.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet63.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet63.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet63.xss">
+      <DependentUpon>cagriDataSet63.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet64.xsc">
+      <DependentUpon>cagriDataSet64.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet64.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet64.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet64.xss">
+      <DependentUpon>cagriDataSet64.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet65.xsc">
+      <DependentUpon>cagriDataSet65.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet65.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet65.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet65.xss">
+      <DependentUpon>cagriDataSet65.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet7.xsc">
+      <DependentUpon>cagriDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet7.xss">
+      <DependentUpon>cagriDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet8.xsc">
+      <DependentUpon>cagriDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet8.xss">
+      <DependentUpon>cagriDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet9.xsc">
+      <DependentUpon>cagriDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="cagriDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cagriDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cagriDataSet9.xss">
+      <DependentUpon>cagriDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
